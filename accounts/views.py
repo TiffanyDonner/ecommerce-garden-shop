@@ -7,12 +7,12 @@ from accounts.forms import UserLoginForm, UserRegistrationForm
 
 def index(request):
     """Return the index.html file"""
-    return render(request,  'index.html')
+    return render(request, 'index.html')
 
 
 @login_required
 def logout(request):
-    """Log the user out"""
+    """A view that logs the user out and redirects back to the index page"""
     auth.logout(request)
     messages.success(request, "You have successfully been logged out")
     return redirect(reverse('index'))
@@ -34,7 +34,8 @@ def login(request):
                 auth.login(user=user, request=request)
                 return redirect(reverse('index'))
             else:
-                login_form.add_error(None, "Your username or password is incorrect")
+                login_form.add_error(None,
+                                     "Your username or password is incorrect")
     else:
         login_form = UserLoginForm()
     return render(request, 'login.html', {'login_form': login_form})
@@ -57,7 +58,8 @@ def registration(request):
                 auth.login(user=user, request=request)
                 messages.success(request, "You have successfully registered")
             else:
-                messages.error(request, "Unable to register your account at this time")
+                messages.error(request,
+                               "Unable to register your account at this time")
     else:
         registration_form = UserRegistrationForm()
     return render(request, 'registration.html', {
