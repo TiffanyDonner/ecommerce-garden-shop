@@ -29,6 +29,11 @@ a {
 
 .navbar-nav {
     padding-top: 15px;
+    background-color: #fff;
+}
+
+.navbar-collapse {
+    background-color: #fff;
 }
 
 li {
