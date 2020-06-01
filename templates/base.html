@@ -12,19 +12,20 @@
 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Esteban&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <script src="https://kit.fontawesome.com/5bc0263873.js" crossorigin="anonymous"></script>
 
     <!-- Main Style Sheet -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
     
-    <!-- Bootstrap JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
-<!-- Fixed masthead -->
-    <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light">
+    <!-- Fixed masthead -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light">
         <a class="navbar-brand" href="/">
             <img src="https://lh3.googleusercontent.com/vEakPVCAkqJoBie7YEYPivir-Un_hA7sMKxAvEAuoE6ZUUMS-RR4FK8PjBAq6CozuDh6HHuO0YqcnqyRbdmx0XEluiHP00rCK2E-Qsq2TmB5X5l0Y0PE43XOETye6jgkrAdA6JU_HBM=w2400" alt="Garden Shop Logo" style="width: 150px;">
         </a>
@@ -32,12 +33,12 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse bg-light" id="navbarSupportedContent">
-            <div class="container align-content-lg-end">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="container">
                 <ul class="navbar-nav">
                     {% if user.is_authenticated %}
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'profile' %}">Profile</a>
@@ -47,7 +48,7 @@
                         </li>
                     {% else %}
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="/">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'login' %}">Login</a>
@@ -66,18 +67,14 @@
                     </li>
                 </ul>
                 
-                <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="get">
+                <form class="form-inline search my-2 my-lg-0" action="{% url 'search' %}" method="get">
                     <input class="form-control search-bar mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
         </div>
     </nav>
-
-    <div>
-        
-    </div>
-
+    <!-- Page Heading and Alerts-->
     <h1>
         {% block page_heading %}{% endblock %}
     </h1>
@@ -90,12 +87,188 @@
             </div>
         </div>
     {% endif %}
-    
+
+    <!-- Content Block Loading -->
     {% block content %} {% endblock %}
-    <footer>
-        <div class="container">
-            <p>© Hide In Design</p>
+
+    <!-- Gift Card Banner -->
+<div class="row banner-row">
+    <div class="banner-text col-7 text-center justify-content-center align-self-center">
+        <h3 class="heading">Gift Cards</h3>
+        <p class="text">The Garden Shop gift card is the key to any gardeners heart.</p>
+        <button type="button" class="btn btn-outline-light">Order Now</button>
+    </div>
+    <div class="banner-img col-5">
+        <img class="gift-card" src="https://lh3.googleusercontent.com/rhVuOT34eWDRRqHygOa6DWSTN8I87KAvHUhN21s2yseKNkVHpxMAJkI5Zvb5RD__ANXCWZtce6NYzl9IYpQN_A9mvOdYiFS3jfsnRX1qUzDCReGtOyjMrbyqLPj9dVs9tzx8iNXFYL4=w2400" alt="Card image cap">
+    </div>
+</div>
+
+<!-- Quotes Carousel-->
+<section class="d-none d-sm-block d-print-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-xl-8 mx-auto">
+                <div class="p-5 bg-white">
+                    <!-- Bootstrap carousel-->
+                    <div class="carousel slide" id="carouselExampleIndicators" data-ride="carousel">
+                        <!-- Bootstrap carousel indicators [nav] -->
+                        <ol class="carousel-indicators mb-0">
+                            <li class="active" data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+
+
+                        <!-- Bootstrap inner [slides]-->
+                        <div class="carousel-inner px-5 pb-4">
+                            <!-- Carousel slide-->
+                            <div class="carousel-item active">
+                                <div class="media"><img class="rounded-circle img-thumbnail" src="https://images.unsplash.com/photo-1563240619-44ec0047592c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="" width="75">
+                                    <div class="media-body ml-3">
+                                        <blockquote class="blockquote border-0 p-0">
+                                            <p class="font-italic lead"> <i class="fa fa-quote-left mr-3 text-success"></i>As a designer, I love to being inspried by others. The staff at Garden Shop are always full of ideas.</p>
+                                            <footer class="blockquote-footer">Someone Cool
+                                                <cite title="Source Title">Shot by <a href="https://unsplash.com/@theshuttervision">Jonathan Cooper</a></cite>
+                                            </footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Carousel slide-->
+                            <div class="carousel-item">
+                                <div class="media"><img class="rounded-circle img-thumbnail" src="https://images.unsplash.com/photo-1565481454267-290bf20575a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="" width="75">
+                                    <div class="media-body ml-3">
+                                        <blockquote class="blockquote border-0 p-0">
+                                            <p class="font-italic lead"> <i class="fa fa-quote-left mr-3 text-success"></i>Going to the Garden Shop is therapy for my soul.</p>
+                                            <footer class="blockquote-footer">Someone Cool
+                                                <cite title="Source Title">Shot by <a href="https://unsplash.com/@annaauza">Anna Auza</a></cite>
+                                            </footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Carousel slide-->
+                            <div class="carousel-item">
+                                <div class="media"><img class="rounded-circle img-thumbnail" src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" width="100">
+                                    <div class="media-body ml-3">
+                                        <blockquote class="blockquote border-0 p-0">
+                                            <p class="font-italic lead"> <i class="fa fa-quote-left mr-3 text-success"></i>Ordering online is so simple and convienent. It arrives beautifully packed and makes me happy everytime.</p>
+                                            <footer class="blockquote-footer">Someone Cool
+                                                <cite title="Source Title">Shot by <a href="https://unsplash.com/@tikh">Atikh Bana</a></cite>
+                                            </footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Bootstrap controls [dots]-->
+                        <a class="carousel-control-prev width-auto" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <i class="fa fa-angle-left text-dark text-lg"></i>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next width-auto" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <i class="fa fa-angle-right text-dark text-lg"></i>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
+</section>
+
+
+    <!-- Site Info -->
+    <div class="row card-deck">
+        <div class="col-md-4">	
+            <article class="card card-body h-100">
+                <div class="row">
+                    <div class="col-3">
+                        <span class="icon-sm rounded-circle bg-primary">
+                            <i class="fa fa-money-bill-alt white"></i>
+                        </span>
+                    </div>
+                    <div class="col-9 info">
+                        <h5 class="title">Reasonable prices</h5>
+                    </div>
+                </div> <!-- iconbox // -->
+            </article> <!-- panel-lg.// -->
+        </div><!-- col // -->
+        <div class="col-md-4">
+            <article class="card card-body h-100">
+                <div class="row">
+                    <div class="col-3">
+                        <span class="icon-sm rounded-circle bg-secondary">
+                            <i class="fa fa-comment-dots white"></i>
+                        </span>
+                    </div>
+                    <div class="col-9 info">
+                        <h5 class="title">Customer support 24/7 </h5>
+                    </div>
+                </div> <!-- iconbox // -->
+            </article> <!-- panel-lg.// -->
+        </div><!-- col // -->
+        <div class="col-md-4">
+            <article class="card card-body h-100">
+                <div class="row">
+                    <div class="col-3">
+                        <span class="icon-sm rounded-circle bg-success">
+                            <i class="fa fa-truck white"></i>
+                        </span>
+                    </div>
+                    <div class="col-9 info">
+                        <h5 class="title">Quick delivery</h5>
+                    </div>
+                </div> <!-- iconbox // -->
+            </article> <!-- panel-lg.// -->
+        </div><!-- col // -->
+    </div> <!-- row.// -->
+
+    <!-- Footer -->
+    <footer class="pt-4 px-5 my-md-5 pt-md-5 border-top bg-secondary">
+        <div class="row">
+          <div class="col-6 col-md">
+            <h5>Shop</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="text-light" href="#">All Products</a></li>
+                <li><a class="text-light" href="#">Plants</a></li>
+                <li><a class="text-light" href="#">Seeds</a></li>
+                <li><a class="text-light" href="#">Equiptment</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>The Garden</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-light" href="#">Staff</a></li>
+              <li>
+                Address:
+                <br>
+                1 Penny Lane
+                <br>
+                Strawberry Hills, AoE
+                <br>
+                W0/2020
+              </li>
+              <li>Phone: +46-06-06-06</li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <img class="mb-2" src="media/images/transparent-favicons-plant-3-transparent.png" alt="" width="24" height="24">
+            <small class="d-block mb-3">© 2020</small>
+            <i class="fab fa-twitter-square fa-2x"></i>
+            <i class="fab fa-instagram-square fa-2x"></i>
+            <i class="fab fa-facebook-square fa-2x"></i>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

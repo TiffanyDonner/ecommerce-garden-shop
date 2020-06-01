@@ -1,27 +1,40 @@
 body {
-    font-family: Arial;
+    font-family: 'Esteban', serif;
+    color: #39494f!important;
 }
 
-h1 {
+h1, h2, h3, h4, h5 {
     font-family: 'Montserrat', sans-serif;
+}
+
+.h1-jumbo {
     text-shadow: 0 0 2px #0b3d2c; /* horizontal-offset vertical-offset 'blur' colour */
 }
 
 a {
-    color: #28a745;
+    color: #2a7d2e;
 }
 
 .navbar {
     max-height: 70px;
     background-color: #fff;
+    color: #39494f!important;
 }
 
 .navbar-brand {
     padding-top: 10px;
 }
 
+.navbar-nav {
+    padding-top: 15px;
+}
+
 li {
     padding: 10px;
+}
+
+.search {
+    padding-top: 10px;
 }
 
 .jumbotron {
@@ -33,17 +46,72 @@ li {
     text-align: center;
 }
 
-.search-bar {
-    width: 50%;
+.icon-sm {
+    line-height: 48px !important;
+    font-size: 20px;
+    color: #fff;
+}
+
+.rounded-circle {
+    padding: 15px;
+}
+
+.title {
+    padding-left: 10px;
+}
+
+.card-deck {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    border: none;
+}
+
+
+.banner-row {
+    background-color: #2a7d2e;
+    background-size: cover;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.gift-card {
+    width: 100%;
+    padding: 15px;
+}
+
+
+.carousel-indicators li {
+    border: none;
+    background: #ccc;
+}
+
+.carousel-indicators li.active {
+    background: #28a745;
+}
+
+.fav-products {
+    margin-bottom: 20px;
+}
+
+.product {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    
 }
 
 footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: 1px solid #ededed;
-    color: #A9A9A9;
+    color: #fff;
 }
+
+
+
+
 
 .accountform {
     padding-top: 20px;
@@ -62,14 +130,7 @@ footer {
     background-color: #c67605;
 }
 
-.product {
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-}
+
 
 caption p {
     word-wrap: break-word;
@@ -79,6 +140,7 @@ caption p {
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .panel-default {
