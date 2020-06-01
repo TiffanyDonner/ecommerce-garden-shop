@@ -8,7 +8,9 @@ h1, h2, h3, h4, h5 {
 }
 
 .h1-jumbo {
-    text-shadow: 0 0 2px #0b3d2c; /* horizontal-offset vertical-offset 'blur' colour */
+    text-shadow: 3px 0px 7px #0b3d2c,
+                -3px 0px 7px #0b3d2c,
+                0px 4px 7px #0b3d2c;
 }
 
 a {
