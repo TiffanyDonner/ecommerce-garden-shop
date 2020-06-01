@@ -11,7 +11,7 @@ class Product(models.Model):
     EQUIPTMENT = 'Equiptment'
     OTHER = 'Other'
 
-    CATEGORY_CHOICES = [
+    CATEGORY = [
         (PLANTS, 'Plants'),
         (SEEDS, 'Seeds'),
         (EQUIPTMENT, 'Equiptment'),
@@ -20,7 +20,7 @@ class Product(models.Model):
 
     category = models.CharField(
         max_length=20,
-        choices=CATEGORY_CHOICES,
+        choices=CATEGORY,
         default=OTHER,
     )
 

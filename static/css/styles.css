@@ -67,7 +67,6 @@ li {
     border: none;
 }
 
-
 .banner-row {
     background-color: #2a7d2e;
     background-size: cover;
@@ -80,7 +79,6 @@ li {
     width: 100%;
     padding: 15px;
 }
-
 
 .carousel-indicators li {
     border: none;
@@ -99,10 +97,14 @@ li {
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto;
     
+}
+
+.product-name {
+    justify-content: center;
 }
 
 footer {

@@ -2,16 +2,31 @@
 
 {% block content %}
 <div class="container">
+<h3>All Products</h3>
+<ul class="cat-list flex flex-wrap justify-center items-center">
+        <li class="mx-1 d-block cat-item">
+            <a href="{% url 'products' %}"><button class="cat-all">View All</button></a>
+        </li>
+
+        {% for category in categories %}
+        <li class="mx-1 cat-item">
+            <a href="{% url 'view_categories' category %}"><button id="{{category}}"
+                    class="cat-button">{{ category }}</button></a>
+        </li>
+        {% endfor %}
+    </ul>
+
 <div class="row row-flex">
     {% for product in products %}
-        <div class="col-md-4">
+        <div class="col-md-4" href="#">
             <figure class="card card-product-grid">
                 <div class="img-wrap product" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
-                <figcaption class="info-wrap">
+                <figcaption class="info-wrap p-4">
                     <div class="fix-height">
-                        <a href="#" class="title">{{ product.name }}</a>
+                        <a href="#" class="title"><h5>{{ product.name }}</h5></a>
                         <div class="price-wrap ml-2 mt-2">
-                            <span class="price">£{{ product.price }}</span>
+                            <p class="product-category">{{product.category}}</p>
+                            <span class="price font-weight-bold">£{{ product.price }}</span>
                         </div>
                     </div>
                     <form method="post" action="{% url 'add_to_cart' product.id %}">
