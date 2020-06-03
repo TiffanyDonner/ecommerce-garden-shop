@@ -1,35 +1,30 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<section id="product">
-    <div class="container">
-        <div class="row">
-            <!-- Users are taken to the previous page they visited -->
-            <div class="col-12 d-block back-btn">
-                <a href="{% url 'products' %}">Return to Shop</a>
-            </div>
-            <div class="d-none d-sm-block">
-                <div class="media">
-                    <img src="'{{ MEDIA_URL }}{{ product.image }}'" class="align-self-start mr-3 media-image" alt="Product Image">
-                    <div class="media-body">
-                        <h5 class="mt-0">{{ product.name }}</h5>
-                        {{ product.description }}
-
-                        <p><i class="fas fa-euro-sign"></i>{{ product.price }}</p>
-                        <form method="post" action="{% url 'add_to_cart' product.id %}">
-                            {% csrf_token %}
-                            <div class="input-group product-btn">
-                                <input name="quantity" type="number" min="1" max="999" class="form-control"
-                                    placeholder="Quantity">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-success" type="submit">Add To Cart</button>
-                                </span>
-                            </div>
-                        </form>
+<div class="container">
+    <!-- Users are taken to products page -->
+    <div class="row back-btn p-4">
+        <a href="{% url 'products' %}">← Return to Shop</a>
+    </div>
+    <!-- Product Detail -->     
+    <div class="row product-detail border border-success p-4 mb-3">
+        <div class="img-wrap product col-lg-3 w-100" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+        <div class="product-info col-lg-3 p-1">
+            <h5>{{ product.name }}</h5>
+            <p>{{ product.description }}</p>
+        </div>
+        <div class="product-pricing col-lg-3 p-4 w-100 text-right align-middle">
+            <p class="pr-1"><i class="fas fa-euro-sign"></i> {{ product.price }}</p>
+            <form method="post" action="{% url 'add_to_cart' product.id %}">
+                {% csrf_token %}
+                    <div class="input-group product-btn float-right w-75">
+                        <input name="quantity" type="number" value="1" min="1" max="999" class="form-control" placeholder="Quantity"/>
+                        <span class="input-group-btn">
+                            <button class="btn btn-success ml-2" type="submit">Add To Cart</button>
+                        </span>
                     </div>
-                </div>
-            </div>
+            </form>
         </div>
     </div>
-</section>
+</div>
 {% endblock %}
