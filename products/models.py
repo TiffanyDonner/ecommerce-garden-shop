@@ -6,16 +6,16 @@ class Product(models.Model):
 
     objects = models.Manager()
 
-    PLANTS = 'Plants'
-    SEEDS = 'Seeds'
-    EQUIPTMENT = 'Equiptment'
-    OTHER = 'Other'
+    PLANTS = 'plants'
+    SEEDS = 'seeds'
+    EQUIPTMENT = 'equiptment'
+    OTHER = 'other'
 
     CATEGORY = [
-        (PLANTS, 'Plants'),
-        (SEEDS, 'Seeds'),
-        (EQUIPTMENT, 'Equiptment'),
-        (OTHER, 'Other'),
+        (PLANTS, 'plants'),
+        (SEEDS, 'seeds'),
+        (EQUIPTMENT, 'equiptment'),
+        (OTHER, 'other'),
     ]
 
     category = models.CharField(

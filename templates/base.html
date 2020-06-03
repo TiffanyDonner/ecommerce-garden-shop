@@ -41,7 +41,7 @@
                             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'products' %}">Login</a>
+                            <a class="nav-link" href="{% url 'products' %}">Products</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'profile' %}">Profile</a>
@@ -54,7 +54,7 @@
                             <a class="nav-link" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'products' %}">Login</a>
+                            <a class="nav-link" href="{% url 'products' %}">Products</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'login' %}">Login</a>
@@ -95,11 +95,11 @@
     {% block content %} {% endblock %}
 
     <!-- Gift Card Banner -->
-<div class="row banner-row">
+<div class="row banner-row w-100">
     <div class="banner-text col-7 text-center justify-content-center align-self-center">
         <h3 class="heading">Gift Cards</h3>
         <p class="text">The Garden Shop gift card is the key to any gardeners heart.</p>
-        <button type="button" class="btn btn-outline-light">Order Now</button>
+        <a type="button" class="btn btn-outline-light" href="products:<product/5>">Order Now</a>
     </div>
     <div class="banner-img col-5">
         <img class="gift-card" src="https://lh3.googleusercontent.com/rhVuOT34eWDRRqHygOa6DWSTN8I87KAvHUhN21s2yseKNkVHpxMAJkI5Zvb5RD__ANXCWZtce6NYzl9IYpQN_A9mvOdYiFS3jfsnRX1qUzDCReGtOyjMrbyqLPj9dVs9tzx8iNXFYL4=w2400" alt="Gift Card Sample">
@@ -108,7 +108,7 @@
 
 <!-- Quotes Carousel-->
 <section class="d-none d-sm-block d-print-block">
-    <h5 class="jumbo-container">What Our Clients Say:</h3>
+    <h5 class="jumbo-container">What Our Clients Say:</h5>
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-xl-8 mx-auto">

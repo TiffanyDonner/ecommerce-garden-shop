@@ -17,14 +17,14 @@ a {
     color: #2a7d2e;
 }
 
-.navbar {
-    max-height: 70px;
-    background-color: #fff;
+.navbar {    
+    background-color: #fff !important;
     color: #39494f!important;
 }
 
 .navbar-brand {
     padding-top: 10px;
+    background-color: #fff;
 }
 
 .navbar-nav {

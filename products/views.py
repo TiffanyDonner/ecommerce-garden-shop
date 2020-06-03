@@ -9,10 +9,16 @@ def all_products(request):
     return render(request, "products.html", {"products": products})
 
 
-def product_detail(request):
+def product_category(request, category):
     """ Return and render all products """
-    products = Product.objects.all()
-    return render(request, "product_detail.html", {"products": products})
+    products = Product.objects.filter(category=category)
+    return render(request, "products.html", {"products": products})
+
+
+def product_detail(request, product_id):
+    """ Return and render all products """
+    product = Product.objects.get(id=product_id)
+    return render(request, "product_detail.html", {"product": product})
 
 
 def view_categories(request, category):
