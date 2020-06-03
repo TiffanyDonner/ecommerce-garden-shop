@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static from staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +19,9 @@
 
     <!-- Main Style Sheet -->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+
+    <!-- Site Favicon -->
+    <link rel="shortcut icon" type="image/ico" href="{% static 'images/favicon.ico' %}"/>
     
     
 </head>
@@ -27,7 +30,7 @@
     <!-- Fixed masthead -->
     <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
         <a class="navbar-brand" href="/">
-            <img src="https://lh3.googleusercontent.com/vEakPVCAkqJoBie7YEYPivir-Un_hA7sMKxAvEAuoE6ZUUMS-RR4FK8PjBAq6CozuDh6HHuO0YqcnqyRbdmx0XEluiHP00rCK2E-Qsq2TmB5X5l0Y0PE43XOETye6jgkrAdA6JU_HBM=w2400" alt="Garden Shop Logo" style="width: 150px;">
+            <img src="{% static 'images/garden-shop-logo3.png' %}" alt="Garden Shop Logo" style="width: 150px;">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -99,10 +102,10 @@
     <div class="banner-text col-7 text-center justify-content-center align-self-center">
         <h3 class="heading">Gift Cards</h3>
         <p class="text">The Garden Shop gift card is the key to any gardeners heart.</p>
-        <a type="button" class="btn btn-outline-light" href="products:<product/5>">Order Now</a>
+        <a type="button" class="btn btn-outline-light" href="products/product/5">Order Now</a>
     </div>
     <div class="banner-img col-5">
-        <img class="gift-card" src="https://lh3.googleusercontent.com/rhVuOT34eWDRRqHygOa6DWSTN8I87KAvHUhN21s2yseKNkVHpxMAJkI5Zvb5RD__ANXCWZtce6NYzl9IYpQN_A9mvOdYiFS3jfsnRX1qUzDCReGtOyjMrbyqLPj9dVs9tzx8iNXFYL4=w2400" alt="Gift Card Sample">
+        <img class="gift-card" src="{% static 'images/gift_card_2.png' %}" alt="Gift Card Sample">
     </div>
 </div>
 
@@ -127,7 +130,8 @@
                         <div class="carousel-inner px-5 pb-4">
                             <!-- Carousel slide-->
                             <div class="carousel-item active">
-                                <div class="media"><img class="rounded-circle img-thumbnail" src="https://images.unsplash.com/photo-1563240619-44ec0047592c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="Profile Picture" width="75">
+                                <!-- Profile photo Jonathan Cooper on Unsplash -->
+                                <div class="media"><img class="rounded-circle img-thumbnail" src="{% static 'images/jonathan-cooper.jpg' %}" alt="Profile Picture" width="75">
                                     <div class="media-body ml-3">
                                         <blockquote class="blockquote border-0 p-0">
                                             <p class="font-italic lead"> <i class="fa fa-quote-left mr-3 text-success"></i>As a designer, I love to being inspried by others. The staff at Garden Shop are always full of ideas.</p>
@@ -141,7 +145,8 @@
 
                             <!-- Carousel slide-->
                             <div class="carousel-item">
-                                <div class="media"><img class="rounded-circle img-thumbnail" src="https://images.unsplash.com/photo-1565481454267-290bf20575a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="Profile Picture" width="75">
+                                <!-- Profile photo Anna Auza on Unsplash -->
+                                <div class="media"><img class="rounded-circle img-thumbnail" src="{% static 'images/anna-auza.jpg' %}" alt="Profile Picture" width="75">
                                     <div class="media-body ml-3">
                                         <blockquote class="blockquote border-0 p-0">
                                             <p class="font-italic lead"> <i class="fa fa-quote-left mr-3 text-success"></i>Going to the Garden Shop is therapy for my soul.</p>
@@ -155,7 +160,7 @@
 
                             <!-- Carousel slide-->
                             <div class="carousel-item">
-                                <div class="media"><img class="rounded-circle img-thumbnail" src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Profile Picture" width="100">
+                                <div class="media"><img class="rounded-circle img-thumbnail" src="{% static 'images/atikh-bana.jpg' %}" alt="Profile Picture" width="100">
                                     <div class="media-body ml-3">
                                         <blockquote class="blockquote border-0 p-0">
                                             <p class="font-italic lead"> <i class="fa fa-quote-left mr-3 text-success"></i>Ordering online is so simple and convienent. It arrives beautifully packed and makes me happy everytime.</p>
@@ -188,7 +193,7 @@
 
     <!-- Site Info -->
     <div class="row card-deck">
-        <div class="col-md-4">	
+        <div class="col-lg-4 pb-1">	
             <article class="card card-body h-100">
                 <div class="row">
                     <div class="col-3">
@@ -202,7 +207,7 @@
                 </div> <!-- iconbox // -->
             </article> <!-- panel-lg.// -->
         </div><!-- col // -->
-        <div class="col-md-4">
+        <div class="col-lg-4 pb-2">
             <article class="card card-body h-100">
                 <div class="row">
                     <div class="col-3">
@@ -216,7 +221,7 @@
                 </div> <!-- iconbox // -->
             </article> <!-- panel-lg.// -->
         </div><!-- col // -->
-        <div class="col-md-4">
+        <div class="col-lg-4 pb-2">
             <article class="card card-body h-100">
                 <div class="row">
                     <div class="col-3">
@@ -233,7 +238,7 @@
     </div> <!-- row.// -->
 
     <!-- Footer -->
-    <footer class="pt-4 px-5 my-md-5 pt-md-5 border-top bg-secondary">
+    <footer class="px-5 my-md-5 pt-md-5 border-top bg-secondary">
         <div class="row">
           <div class="col-6 col-md">
             <h5>Shop</h5>

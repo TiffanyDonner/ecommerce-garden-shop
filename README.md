@@ -1,4 +1,4 @@
-![Garden Shop Site Header Image](media/readme-header.PNG)
+![Garden Shop Site Header Image](static/readme/readme-header.PNG)
 # Garden Shop
 ---
 
@@ -91,11 +91,8 @@ This is an ongoing project and will go fully live later in 2020.
 - The current setup allows anyone to edit pets/events that do not belong to them. Need to check whether the event or pet belongs to session['username'] first before updating. If not, redirect them to their User Profile.
 
 #### Future Updates
-- Add the ability to add a pet photo to the profile page.
-- Create a button to add Logo, with hyperlink to website, to users' home screen.
-- Add the ability to connect an event to a pet.
-- Connect contacts' address to google maps.
-- Connect the contact's phone number to a dialer.
+- Add Favorites as a filter to populate automatically to home page in Favorite Products instead of being hard coded.
+- Add a blog to populate featured posts on home page.
 
 ## Technology Used
 | Languages | Libraries | Tools | Hosting |
@@ -206,46 +203,24 @@ Any suggestions given by users have been added above in [Features Left To Implem
 ## Credits
 - Code Institue, [TaskManager Lesson](https://github.com/Code-Institute-Solutions/TaskManager): For basic event Function
 - My mentor Brian Macharia, Code Institute Tutors, and Slack Group!
-- Creating a User Login System Using Python, Flask and MongoDB [Pretty Printed](https://www.youtube.com/watch?v=vVx1737auSE)
-- Ewan Lockwood, [The Book Stop](https://github.com/ewanlockwood/the-book-stop): For structure on how to implement a login system.
-- Px Here, [Banner Image](https://pxhere.com/en/photo/1597775)
+- Logo Created with Adobe Illistraitor. Plant image in logo anf favicon from: [YAWD](https://ya-webdesign.com/imgdownload.html)
+- Quotes Carousal Code from [BootStrapious] (https://bootstrapious.com/p/bootstrap-carousel-with-quotes)
+- Reduced Image Sizes with [TinyPNG](https://tinypng.com/)
+- Shadow Effect on home page from, [codesdope.](https://www.codesdope.com/blog/article/25-creative-css3-text-shadow-effects-you-cant-miss/)
 
-Project Sources:
-[favicon](https://ya-webdesign.com/imgdownload.html)
-[Photo by Creative Vix from Pexels](https://www.pexels.com/photo/garden-7283/)
-https://pixabay.com/photos/planting-gardening-flowers-plant-865294/
-https://pixabay.com/photos/background-beautiful-bloom-blossom-1587514/
-https://pixabay.com/photos/nature-cafe-natural-plants-shop-5111414/
-https://pixabay.com/photos/tulips-white-spring-flowers-nature-4184171/
-https://pixabay.com/photos/gardening-agriculture-grass-plant-2518377/
-https://pixabay.com/photos/succulents-plant-nature-garden-4589714/
-https://pixabay.com/photos/cherries-fruit-tree-harvest-839864/
-https://pxhere.com/en/photo/114095
-https://www.needpix.com/photo/download/1024374/flowers-floral-flowery-spring-plants-ornament-bouquet-free-pictures-free-photos
-https://c.pxhere.com/photos/d9/97/barrow_cart_equipment_flower_garden_gardening_grass_green-1159034.jpg!d
-
-Quotes Carousal
-https://bootstrapious.com/p/bootstrap-carousel-with-quotes
-
-Profile Images
-Photo by Atikh Bana on Unsplash
-https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80
-
-Product Images
-https://www.publicdomainpictures.net/en/view-image.php?image=195241&picture=pumpkin-patch
-Image by <a href="https://pixabay.com/users/Capri23auto-1767157/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4742623">Capri23auto</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4742623">Pixabay</a>
-Image by <a href="https://pixabay.com/users/Didgeman-153208/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4181712">Thomas B.</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4181712">Pixabay</a>
-Image by <a href="https://pixabay.com/users/tookapic-1386459/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=932079">tookapic</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=932079">Pixabay</a>
-Image by <a href="https://pixabay.com/users/pasja1000-6355831/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3571119">pasja1000</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3571119">Pixabay</a>
-Image by <a href="https://pixabay.com/users/Bru-nO-1161770/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2759887">Bruno /Germany</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2759887">Pixabay</a>
-Image by <a href="https://pixabay.com/users/suetot-5317196/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4186301">Zsuzsanna Tóth</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4186301">Pixabay</a>
-Image by <a href="https://pixabay.com/users/Pexels-2286921/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1839134">Pexels</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1839134">Pixabay</a>
-
-Embed google photos:
-https://www.labnol.org/embed/google/photos/
-
-Rduce image size:
-https://tinypng.com/
-
-Shadow effect
-https://www.codesdope.com/blog/article/25-creative-css3-text-shadow-effects-you-cant-miss/
+### Image Credits
+- Jumbo Photo on index.html - Image by [Kerstin Riemer](https://pixabay.com/users/kriemer-932379/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4357409) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4357409)
+- Cherry Photo from [Free Photos](https://pixabay.com/photos/cherries-fruit-tree-harvest-839864/)
+- Pumkin Photo [Public Domain Pictures](https://www.publicdomainpictures.net/en/view-image.php?image=195241&picture=pumpkin-patch)
+- Pineapple Plant Photo Image by [振鐸 李](https://pixabay.com/photos/pineapple-%E9%B3%B3-pear-potted-plants-%E9%A0%82-816527/) from Pixabay
+- Blue Gloves photo [S. Laiba Ali, UnSplash](https://unsplash.com/photos/95d6vqxarpM)
+- Cafe Table Image [PXHERE](https://pxhere.com/en/photo/114095)
+- Wheelbarrow Image [PXHERE](https://c.pxhere.com/photos/d9/97/barrow_cart_equipment_flower_garden_gardening_grass_green-1159034.jpg!d)
+- Clippers [Pixabay-Bru-nO](https://pixabay.com/photos/autumn-scissors-pruning-shears-tool-2759887/)
+- Basil [Pixabay-tookapic](https://pixabay.com/photos/basil-herbs-food-fresh-cooking-932079/)
+- Coffee and cake [Pixabay-Pexels](https://pixabay.com/photos/cake-cappuccino-ceramic-coffee-cup-1839134/)
+- Dahlia [Pixabay-hansbenn](https://pixabay.com/photos/flower-blossom-bloom-dahlia-2019061/)
+- Lilac Bush [Pixabay-Didgeman](https://pixabay.com/photos/lilac-purple-flowers-violet-4181712/)
+- Landscape Design(Man Holding Flowers) [Pixabay-suetot](https://pixabay.com/photos/gardener-gardening-flower-gerbera-4186301/)
+- Wild Flowers [Pixabay-pasja1000](https://pixabay.com/photos/flowers-meadows-grass-plant-nature-3571119/)
+- Profile Photos [Unsplash](https://images.unsplash.com/)
