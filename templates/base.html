@@ -56,8 +56,12 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="/">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'products' %}">Products</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="{% url 'products' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'login' %}">Login</a>
@@ -236,7 +240,7 @@
             </article> <!-- panel-lg.// -->
         </div><!-- col // -->
     </div> <!-- row.// -->
-
+    
     <!-- Footer -->
     <footer class="px-5 my-md-5 pt-md-5 border-top bg-secondary">
         <div class="row">
@@ -266,7 +270,7 @@
             </ul>
           </div>
           <div class="col-6 col-md">
-            <img class="mb-2" src="media/images/transparent-favicons-plant-3-transparent.png" alt="Plant Icon" width="24" height="24">
+            <img class="mb-2" src="{% static 'images/transparent-plant.png' %}" alt="Plant Icon" width="24" height="24">
             <small class="d-block mb-3">© 2020</small>
             <i class="fab fa-twitter-square fa-2x"></i>
             <i class="fab fa-instagram-square fa-2x"></i>
