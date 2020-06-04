@@ -10,3 +10,8 @@ def index(request):
 def cafe(request):
     """Returns the cafe file"""
     return render(request, 'cafe.html')
+
+
+def pineapple(request):
+    """Returns the grow_pineapple file"""
+    return render(request, 'grow_pineapple.html')

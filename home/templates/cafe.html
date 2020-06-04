@@ -1,11 +1,46 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% block page_title %}Cafe{% endblock %} 
+
 {% block content %}
-<header class="jumbotron jumbotron-fluid" style="background-image: url('https://p1.pxfuel.com/preview/992/765/246/farm-thatched-roofs-cottage-garden-garden-flower-meadow-flora.jpghttps://cdn.pixabay.com/photo/2017/05/13/10/46/craft-2309270_1280.jpg')">
-    <div class="container jumbo-container">
-        <h1 class="h1-jumbo">Garden Shop Cafe</h1>
+<div class="bg-light">
+    <div class="container w-100 pt-5 pb-5">
+        <div class="title pb-2">
+            <h3>Greenhouse Café</h3>
+        </div>
+        <div class="row border border-success bg-white justify-content-center">              
+            <div class="image-cafe">
+                <img src="{% static 'images/table-coffee-sunlight.jpg' %}" class="img-fluid pt-3" alt="Cafe Table"/>
+            </div>
+            <div class="content text-center">
+                <p class="pt-5 pl-5 pr-5">The Greenhouse Café is located in a fantasic setting at the center of the garden. Offering fresh drinks and pastries made in the bakery next door.</p>
+                <h4 class="title">Menu</h4>
+                <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Price</th>                            
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>Latté</td>
+                            <td>£3.50</td>
+                            </tr>
+                            <tr>
+                            <td>Tea</td>
+                            <td>£2.50</td>
+                            </tr>
+                            <tr>
+                            <td>Pastry</td>
+                            <td>£3.50</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
     </div>
-</header>
-
-
+</div>
 {% endblock %}
