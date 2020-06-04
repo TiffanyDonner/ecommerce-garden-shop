@@ -30,7 +30,7 @@
             <strong class="price">£125.50</strong>
         </div>
         <div class="card-footer bg-transparent border-0">
-            <a href="products/product/1" class="btn btn-success btn-med active" role="button" aria-pressed="true">Shop</a>
+            <a href="{% url 'product_detail' 1 %}" class="btn btn-success btn-med active" role="button" aria-pressed="true">Shop</a>
         </div>
 	</div> <!-- col.// -->
     <div class="card p-3 border-0">
@@ -41,7 +41,7 @@
             <strong class="price">£5.00</strong>
         </div>
         <div class="card-footer bg-transparent border-0">
-            <a href="products/product/2" class="btn btn-success btn-med active" role="button" aria-pressed="true">Shop</a>
+            <a href="{% url 'product_detail' 2 %}" class="btn btn-success btn-med active" role="button" aria-pressed="true">Shop</a>
         </div>
 	</div> <!-- col.// -->
     <div class="card p-3 border-0">
@@ -52,7 +52,7 @@
             <strong class="price">£10.00</strong>
         </div>
         <div class="card-footer bg-transparent border-0">
-            <a href="products/product/4" class="btn btn-success btn-med active" role="button" aria-pressed="true">Shop</a>
+            <a href="{% url 'product_detail' 4 %}" class="btn btn-success btn-med active" role="button" aria-pressed="true">Shop</a>
         </div>
 	</div> <!-- col.// -->
     <div class="card p-3 border-0">
@@ -62,7 +62,7 @@
             <strong class="price">£25.00</strong>
         </div>
         <div class="card-footer bg-transparent border-0">
-            <a href="products/product/5" class="btn btn-success btn-med active" role="button" aria-pressed="true">Shop</a>
+            <a href="{% url 'product_detail' 5 %}" class="btn btn-success btn-med active" role="button" aria-pressed="true">Shop</a>
         </div>
 	</div> <!-- col.// -->
 </div> <!-- row.// -->
@@ -78,7 +78,7 @@
         <p class="card-text">Growing something yourself can be fun and enjoyable for the whole family. Find out how to grow your own pineapple at home.</p>
     </div>
     <div class="card-footer bg-transparent border-0">
-        <a type="button" class="btn btn-outline-success" href="home/templates/grow_pineapple.html">Learn More</a>
+        <a type="button" class="btn btn-outline-success" href="{% url 'pineapple' %}">Learn More</a>
     </div>
   </div>
   <div class="card">
@@ -89,7 +89,7 @@
         <p class="card-text">Never get stuck with a flat tire again. Viking Supplies wants you to enjoy using their new rust proof wheel barrows with run flat tires.</p>
     </div>
     <div class="card-footer bg-transparent border-0">    
-        <a type="button" class="btn btn-outline-success" href="products/product/3">Order Now</a>
+        <a type="button" class="btn btn-outline-success" href="{% url 'product_detail' 3 %}">Order Now</a>
     </div>
   </div>
   <div class="card">
@@ -100,7 +100,7 @@
         <p class="card-text">Take a break while your shopping at the Greenhouse Café. Enjoy the view with a cup of joe and something sweet.</p>
     </div>
     <div class="card-footer bg-transparent border-0">
-        <a type="button" class="btn btn-outline-success" href="home/templates/cafe.html">Menu</a>
+        <a type="button" class="btn btn-outline-success" href="{% url 'cafe' %}">Menu</a>
     </div>
   </div>
 </section>

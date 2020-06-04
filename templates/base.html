@@ -43,10 +43,13 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'products' %}">Products</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="{% url 'products' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                            </div>
                         </li>
-                        
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'profile' %}">Profile</a>
                         </li>
@@ -58,7 +61,7 @@
                             <a class="nav-link" href="/">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="{% url 'products' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
+                            <a class="nav-link dropdown-toggle" href="{% url 'products' %}" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="#">Action</a>
                                 <a class="dropdown-item" href="#">Another action</a>
@@ -107,7 +110,7 @@
     <div class="banner-text col-7 text-center justify-content-center align-self-center">
         <h3 class="heading">Gift Cards</h3>
         <p class="text">The Garden Shop gift card is the key to any gardeners heart.</p>
-        <a type="button" class="btn btn-outline-light" href="products/product/5">Order Now</a>
+        <a type="button" class="btn btn-outline-light" href="{% url 'product_detail' 5 %}">Order Now</a>
     </div>
     <div class="banner-img col-5">
         <img class="gift-card" src="{% static 'images/gift_card_2.png' %}" alt="Gift Card Sample">

@@ -77,22 +77,9 @@ If the user feels they no longer need a record they have entered, they have the 
 Resides at the bottom of each page to establish closure and to protect the business copyright.
 
 ### Features Left To Implement
-This is an ongoing project and will go fully live later in 2020. 
-#### Next Release 1.5:
-- Create a forgot password link for the user.
-- Log the user out automatically after a time period.
-- About and Contact Page
-- Add a search feature to events with the most recent event first in the list.
-- Mark an event as done and create a history page that is will be added to.
-- Add the ability to add contacts.
-- Add an email to the registration form.
-- Create a user profile where the user can update account information such as email and change password.
-- Ability to upload documents into an event.
-- The current setup allows anyone to edit pets/events that do not belong to them. Need to check whether the event or pet belongs to session['username'] first before updating. If not, redirect them to their User Profile.
-
-#### Future Updates
 - Add Favorites as a filter to populate automatically to home page in Favorite Products instead of being hard coded.
 - Add a blog to populate featured posts on home page.
+- Add size, weight and features to product details.
 
 ## Technology Used
 | Languages | Libraries | Tools | Hosting |
