@@ -2,18 +2,26 @@
 
 {% load bootstrap_tags %} 
 
+{% load static from staticfiles %}
+
 {% block page_title %}Registration Page{% endblock %} 
 
 {% block content %}
-
-    <div class="container pt-5 pb-5">
-        <h3 class="pb-3">New User Registration</h3>
-        <form method="POST">
-            {% csrf_token %} {{ registration_form | as_bootstrap }}
-            <button type="submit" class="btn btn-success">Register</button>
-        </form>
-        <p>If you already have an account, you can <a href="{% url 'login' %}">sign in </a></p>
+    <div class="container w-50 pt-5 pb-5">
+        <div class="title pb-2">
+            <h3>New User Registration</h3>
+        </div>         
+        <div class="section p-3 border border-success">
+            <div class="row p-3">
+                <form method="POST">
+                    {% csrf_token %} {{ registration_form | as_bootstrap }}
+                    <button type="submit" class="btn btn-success">Register</button>
+                </form>
+                <div class="row pt-1">
+                    <p>If you already have an account, you can <a href="{% url 'login' %}">sign in </a></p>
+                </div>
+            </div>
+        </div>
     </div>
-
 
 {% endblock %}
