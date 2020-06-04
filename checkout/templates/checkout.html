@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% load static from staticfiles %}
+
+{% load bootstrap_tags %}
+
+{% block page_title %}Checkout{% endblock %} 
+
+{% block head_js %}
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+    //<![CDATA[
+        Stripe.publishableKey = '{{ publishable }}';
+    //]]>
+</script>
+<script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="container w-100 pt-5 pb-5">
+        <div class="title pb-2">
+            <h3>Checkout</h3>
+        </div>
+        <div class="row pt-3 border border-success text-align-center">
+            <div class="row w-100">
+                {% for item in cart_items %}
+                    <div class="row mx-auto">
+                    
+                            <div class="product ml-2" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
+
+                            <div class="caption p-3">
+                                <h4>{{ item.product.name }}</h4>
+                                <div class="input-group-addon">Quanity: {{item.quantity}}</div>                 
+                                <p>£{{ item.product.price }}</p>
+                            </div>
+                        
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row w-100 p-3 mb-2 bg-secondary text-white justify-content-end">
+                <p>Total: </p>
+                <p><span class="glyphicon glyphicon-euro pl-1" aria-hidden="true"></span>£{{ total }}</p>
+        
+            </div>
+            <div class="payment-info w-100 p-3">
+                <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
+                    <legend><h4>Payment Details</h4></legend>
+
+                    <div id="credit-card-errors" style="display: none;">
+                        <div class="alert-message block-message error" id="stripe-error-message"></div>
+                    </div>
+                    <div class="row w-100 col-lg-12 p-1">
+                    <div class="personal-info col-lg-6">
+                    <h5>Personal Information</h5>
+                    <div class="form-group">
+                        {{ order_form | as_bootstrap }}
+                    </div>
+                    </div>
+                    <div class="payment-info col-lg-6 pl-lg-5">
+                    <h5>Payment Information</h5>
+                    <div class="form-group">
+                        {{ payment_form | as_bootstrap }}
+                    </div>
+                    </div>
+                    {% csrf_token %}
+                    
+                    </div>
+                    <div class="row form-group col-12 float-right">
+                        <input class="btn btn-success" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
