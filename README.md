@@ -193,6 +193,8 @@ Any suggestions given by users have been added above in [Features Left To Implem
 - Logo Created with Adobe Illistraitor. Plant image in logo anf favicon from: [YAWD](https://ya-webdesign.com/imgdownload.html)
 - Quotes Carousal Code from [BootStrapious] (https://bootstrapious.com/p/bootstrap-carousel-with-quotes)
 - Reduced Image Sizes with [TinyPNG](https://tinypng.com/)
+- MDB [Bootstrap Templates](https://mdbootstrap.com/docs/jquery/forms/contact/)
+- Codemy.com [Contact Pages](https://www.youtube.com/watch?v=w4ilq6Zk-08)
 - Shadow Effect on home page from, [codesdope.](https://www.codesdope.com/blog/article/25-creative-css3-text-shadow-effects-you-cant-miss/)
 
 ### Image Credits
