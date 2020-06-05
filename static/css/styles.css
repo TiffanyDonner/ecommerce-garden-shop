@@ -52,6 +52,7 @@ li {
 .jumbotron {
     color: white;
     background-size: cover;
+    height: 500px;
 }
 
 .jumbo-container {

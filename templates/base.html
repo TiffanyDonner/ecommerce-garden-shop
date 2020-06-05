@@ -46,8 +46,11 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="{% url 'products' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
+                                <a class="dropdown-item" href="{% url 'product_category' 'plants' %}">Plants</a>
+                                <a class="dropdown-item" href="{% url 'product_category' 'seeds' %}">Seeds</a>
+                                <a class="dropdown-item" href="{% url 'product_category' 'equiptment' %}">Tools</a>
+                                <a class="dropdown-item" href="{% url 'product_category' 'other' %}">Other</a>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -251,10 +254,11 @@
           <div class="col-6 col-md">
             <h5>Shop</h5>
             <ul class="list-unstyled text-small">
-                <li><a class="text-light" href="{% url 'products' %}">All Products</a></li>
-                <li><a class="text-light" href="#">Plants</a></li>
-                <li><a class="text-light" href="#">Seeds</a></li>
-                <li><a class="text-light" href="#">Equiptment</a></li>
+                <li><a class="text-white" href="{% url 'products' %}">All Products</a></li>
+                <li><a class="text-white" href="{% url 'product_category' 'plants' %}">Plants</a></li>
+                <li><a class="text-white" href="{% url 'product_category' 'seeds' %}">Seeds</a></li>
+                <li><a class="text-white" href="{% url 'product_category' 'equiptment' %}">Tools</a></li>
+                <li><a class="text-white" href="{% url 'product_category' 'other' %}">Other</a></li>
             </ul>
           </div>
           <div class="col-6 col-md">

@@ -3,19 +3,7 @@
 {% block content %}
 <div class="container">
 <h3>Products</h3>
-    <div class="row">
-        <ul class="list-group list-group-horizontal">
-            <li class="mx-1 d-block cat-item">
-                <a href="{% url 'products' %}"><button class="btn btn-outline-success cat-all">View All</button></a>
-            </li>
-
-            {% for category in categories %}
-            <li class="list-group">
-                <a href="{% url 'product_category' category %}"><button class="btn btn-outline-success" id="{{category}}">{{ category }}</button></a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
+    
 <!-- Products All -->
 <div class="row row-flex">
     {% for product in products %}
