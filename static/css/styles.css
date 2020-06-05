@@ -52,12 +52,27 @@ li {
 .jumbotron {
     color: white;
     background-size: cover;
+    background-attachment: fixed;
     height: 500px;
+    margin-bottom: 0;
 }
 
 .jumbo-container {
     text-align: center;
 }
+
+.banner-row {
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/*****.fav-products {
+    margin-top: -40px;
+    background-color: 000;
+    background-size: cover;
+    z-index: 100;
+    position:relative;
+}*****/
 
 .icon-sm {
     line-height: 48px !important;

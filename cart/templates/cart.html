@@ -7,7 +7,11 @@
 {% block page_title %}Shopping Cart{% endblock %} 
 
 {% block content %}
-    <div class="container w-100 pt-5 pb-5">
+    <div class="container w-100 pt-2 pb-5">
+        <!-- Users are taken to products page -->
+        <div class="row back-btn p-2">
+            <a href="{% url 'products' %}">← Continue Shopping</a>
+        </div>
         <div class="title pb-2">
             <h3>Shopping Cart</h3>
         </div>

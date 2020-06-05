@@ -1,6 +1,6 @@
 ![Garden Shop Site Header Image](static/readme/readme-header.PNG)
 # Garden Shop
----
+The Garden Shop is a neighborhood garden store anywhere in the world designed by Tiffany Donner.  
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@
 A live demo of the website can be found [here](#).
 
 ## Project Purpose
----
+To build a fullstack application.
 
 ## UX
 #### The ideal Garden Shop User is:
@@ -80,6 +80,7 @@ Resides at the bottom of each page to establish closure and to protect the busin
 - Add Favorites as a filter to populate automatically to home page in Favorite Products instead of being hard coded.
 - Add a blog to populate featured posts on home page.
 - Add size, weight and features to product details.
+- Redirect user during checkout to payment information instead of backto the homepage.
 
 ## Technology Used
 | Languages | Libraries | Tools | Hosting |
@@ -213,3 +214,4 @@ Any suggestions given by users have been added above in [Features Left To Implem
 - Landscape Design(Man Holding Flowers) [Pixabay-suetot](https://pixabay.com/photos/gardener-gardening-flower-gerbera-4186301/)
 - Wild Flowers [Pixabay-pasja1000](https://pixabay.com/photos/flowers-meadows-grass-plant-nature-3571119/)
 - Profile Photos [Unsplash](https://images.unsplash.com/)
+- Conifer [Pixabay-Pexels](https://pixabay.com/photos/conifer-evergreen-green-environment-1867371/)
