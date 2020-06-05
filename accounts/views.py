@@ -70,4 +70,5 @@ def registration(request):
 def user_profile(request):
     """The user's profile page"""
     user = User.objects.get(email=request.user.email)
-    return render(request, 'profile.html', {"profile": user})
+    orders = user.orders.all()
+    return render(request, 'profile.html', {"profile": user, "orders": orders})

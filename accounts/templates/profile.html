@@ -16,6 +16,9 @@
         <div class="row p-3">
             <p class="mt-1"><a href="{% url 'password_reset' %}">Reset Password</a></p>
         </div>
+        {% for order in orders %}
+        {{  order }}
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
