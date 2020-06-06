@@ -15,7 +15,7 @@
         <form class="w-100" method="POST">
             {% csrf_token %} {{ login_form | as_bootstrap}}
             <button type="submit" class="btn btn-success">Login</button>
-            <p class="mt-1"><a href="{% url 'password_reset' %}">Reset Password</a></p>
+            <p class="mt-1"><a href="{% url 'reset_password' %}">Reset Password</a></p>
         </form>
     </div>
 </div>
