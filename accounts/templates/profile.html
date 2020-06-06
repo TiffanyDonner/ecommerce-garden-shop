@@ -7,18 +7,47 @@
 {% block content %}
 <div class="container w-50 pt-5 pb-5">
     <div class="title pb-2">
-        <h3>Welcome {{ profile.username }}!</h3>
+        <h3>Welcome {{ profile.first_name }}!</h3>
     </div>
     <div class="section p-3 border border-success">
-        <div class="row p-3">
-            <p class="strong">Email Address: {{ profile.email }}</p>
+        <h5>Personal Information</h5>
+        <div class="row">
+			<table class="table">
+				<tbody>
+                    <tr>
+						<td><strong>User Name:</strong></td>
+						<td>{{ profile.username }}</td>
+					</tr>
+					<tr>
+						<td><strong>First Name:</strong></td>
+						<td>{{ profile.first_name }}</td>
+					</tr>
+					<tr>
+						<td><strong>Last Name:</strong></td>
+						<td>{{ profile.last_name }}</td>
+					</tr>
+					<tr>
+						<td><strong>Email Address:</strong></td>
+						<td>{{ profile.email }}</td>
+					</tr>
+				</tbody>
+			</table>
         </div>
-        <div class="row p-3">
+        <div class="row">
+            <p class="mt-1"><a href="{% url 'edit_profile' %}">Edit Profile</a></p>
+        </div>
+        <div class="row">
             <p class="mt-1"><a href="{% url 'password_reset' %}">Reset Password</a></p>
         </div>
-        {% for order in orders %}
-        {{  order }}
-        {% endfor %}
+        <div class="row">
+            <h5>Order History</h5>
+            
+            {% for order in orders %}
+            <div class="row">
+            {{ order }}
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock %}

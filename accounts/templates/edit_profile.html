@@ -1,0 +1,20 @@
+{% extends 'base.html' %} 
+
+{% load static from staticfiles %}
+
+{% block page_title %}Edit Profile{% endblock %} 
+
+{% block content %}
+<div class="container w-50 pt-5 pb-5">
+    <div class="title pb-2">
+        <h3>Edit Profile</h3>
+    </div>
+    <div class="section p-3 border border-success">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-success">Update</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
