@@ -2,6 +2,8 @@
 # Garden Shop
 The Garden Shop is a neighborhood garden store anywhere in the world designed by Tiffany Donner.  
 
+[![Build Status](https://travis-ci.com/TiffanyDonner/ecommerce-garden-shop.svg?branch=master)](https://travis-ci.com/TiffanyDonner/ecommerce-garden-shop)
+
 ## Table of Contents
 
 1. [Demo](#Demo)
