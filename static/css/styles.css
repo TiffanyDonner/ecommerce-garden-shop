@@ -1,3 +1,4 @@
+/*** Base css styles ***/
 body {
     font-family: 'Esteban', serif;
     color: #39494f!important;
@@ -17,11 +18,7 @@ a {
     color: #2a7d2e;
 }
 
-.row {
-    margin-left: 0;
-    margin-right: 0;
-}
-
+/*** Navbar ***/
 .navbar {    
     background-color: #fff !important;
     color: #39494f!important;
@@ -41,10 +38,18 @@ a {
     background-color: #fff;
 }
 
+
+/*** Structure ***/
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 li {
     padding: 10px;
 }
 
+/*** Features ****/
 .search {
     padding-top: 10px;
 }
@@ -64,15 +69,9 @@ li {
 .banner-row {
     background-size: cover;
     background-attachment: fixed;
+    padding: 15px;
+    margin-bottom: 20px;
 }
-
-/*****.fav-products {
-    margin-top: -40px;
-    background-color: 000;
-    background-size: cover;
-    z-index: 100;
-    position:relative;
-}*****/
 
 .icon-sm {
     line-height: 48px !important;
@@ -91,19 +90,7 @@ li {
     border: none;
 }
 
-.banner-row {
-    background-color: #2a7d2e;
-    background-size: cover;
-    color: #fff;
-    padding: 15px;
-    margin-bottom: 20px;
-}
-
-.gift-card {
-    width: 100%;
-    padding: 15px;
-}
-
+/*** Quotes ***/
 .carousel-indicators li {
     border: none;
     background: #ccc;
@@ -111,6 +98,12 @@ li {
 
 .carousel-indicators li.active {
     background: #28a745;
+}
+
+/***Products ***/
+.gift-card {
+    width: 100%;
+    padding: 15px;
 }
 
 .fav-products {
@@ -124,13 +117,13 @@ li {
     width: 200px;
     height: 200px;
     margin: 0 auto;
-    
 }
 
 .product-name {
     justify-content: center;
 }
 
+/*** Footer ***/
 footer {
     color: #fff;
 }
