@@ -84,7 +84,7 @@ Resides at the bottom of each page to establish closure and to protect the busin
 - Add size, weight and features to product details.
 - Redirect user during checkout to payment information instead of backto the homepage.
 
-## Technology Used
+s## Technology Used
 | Languages | Libraries | Tools | Hosting |
 |----------------------------------|----------------------------------|----------------------------------|----------------------------------|
 | [HTML](https://www.w3.org/html/) | [Materialize](https://materializecss.com/) | MongoDB | Github
