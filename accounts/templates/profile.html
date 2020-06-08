@@ -5,60 +5,62 @@
 {% block page_title %}{{ profile.username }}'s Profile{% endblock %} 
 
 {% block content %}
-<div class="container bg-light col-md-5 pt-3 pb-5">
-    <div class="title pb-2">
-        <h3>Welcome {{ profile.first_name }}!</h3>
-    </div>
-    <div class="section p-3 border border-success">
-        <h5>Personal Information</h5>
-        <div class="row">
-			<table class="table">
-				<tbody>
-                    <tr>
-						<td><strong>User Name:</strong></td>
-						<td>{{ profile.username }}</td>
-					</tr>
-					<tr>
-						<td><strong>First Name:</strong></td>
-						<td>{{ profile.first_name }}</td>
-					</tr>
-					<tr>
-						<td><strong>Last Name:</strong></td>
-						<td>{{ profile.last_name }}</td>
-					</tr>
-					<tr>
-						<td><strong>Email Address:</strong></td>
-						<td>{{ profile.email }}</td>
-					</tr>
-				</tbody>
-			</table>
+<div class="bg-light">
+    <div class="container col-md-6 pt-4 pb-5">
+        <div class="title">
+            <h3>Welcome {{ profile.first_name }}!</h3>
         </div>
-        <div class="row">
-            <p class="mt-1"><a href="{% url 'edit_profile' %}">Edit Profile</a></p>
-        </div>
-        <div class="row">
-            <p class="mt-1"><a href="{% url 'change_password' %}">Change Password</a></p>
-        </div>
-        <div>
-        <h5>Order Date History</h5>
-        </div>
-        <div>
-            {% if order %}          
-            {% for order in orders %}            
-            <p>{{ order.date }} {{ order.town_or_city }} {{ order.county }}</p>
-            {% endfor %}     
-            {% endif %}  
-        </div>     
-        <div class="no-orders">
-            {% if not orders %}
+        <div class="section p-3 bg-white border border-success">
+            <h5>Personal Information</h5>
+            <div class="row">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td><strong>User Name:</strong></td>
+                            <td>{{ profile.username }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>First Name:</strong></td>
+                            <td>{{ profile.first_name }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Last Name:</strong></td>
+                            <td>{{ profile.last_name }}</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Email Address:</strong></td>
+                            <td>{{ profile.email }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <p class="mt-1"><a href="{% url 'edit_profile' %}">Edit Profile</a></p>
+            </div>
+            <div class="row">
+                <p class="mt-1"><a href="{% url 'change_password' %}">Change Password</a></p>
+            </div>
+            <div>
+            <h5>Order Date History</h5>
+            </div>
+            <div>
+                {% if order %}          
+                {% for order in orders %}            
+                <p>{{ order.date }} {{ order.town_or_city }} {{ order.county }}</p>
+                {% endfor %}     
+                {% endif %}  
+            </div>     
+            <div class="no-orders">
+                {% if not orders %}
 
-            <p>Looks like you haven't made any orders yet. <a href="{% url 'products' %}">Go shopping!</a></p>
+                <p>Looks like you haven't made any orders yet. <a href="{% url 'products' %}">Go shopping!</a></p>
 
-            {% endif %}
-        </div>
+                {% endif %}
+            </div>
 
-        <div class="row">
-            <p class="mt-1">Please <a href="{% url 'contact' %}">Contact Us</a> if you have any questions about an order.</p>
+            <div class="row">
+                <p class="mt-1">Please <a href="{% url 'contact' %}">Contact Us</a> if you have any questions about an order.</p>
+            </div>
         </div>
     </div>
 </div>
