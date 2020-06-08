@@ -8,56 +8,60 @@
 
 {% block content %}
 <!-- Cart App Template-->
-<div class="container col-md-8 pt-3 pb-5">
-    <!-- Users are taken to products page -->
-    <div class="row back-btn p-2">
-        <a href="{% url 'products' %}">← Continue Shopping</a>
-    </div>
-    <!-- Cart Status -->
-    <div class="title pb-2">
-        <heading>
-            {% if not cart_items %}
-            <h3>Your cart is empty!</h3>
-            <div class="row p-5 border border-success justify-content-center">
-                <a href="{% url 'products' %}" class="btn btn-success mb-3">We need to go shopping!</a>
-            </div>
-            {% else %}
-            <h3>Shopping Cart</h3>
-            {% endif %}
-        </heading>
-    </div>
-    <!-- Dispay Items in cart -->
-    {% if cart_items %}
-    <div class="row pt-3 pl-2 border border-success justify-content-center">
-        {% for item in cart_items %}
-        <div class="row col-12">
-            <div class="product ml-2 mx-auto" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
-            <div class="caption p-3 mx-auto">
-                <h4>{{ item.product.name }}</h4>
-                <div class="input-group-addon">Quanity: {{item.quantity}}</div>
-                <p>£{{ item.product.price }}</p>
+<div class="page bg-light">
+	<div class="container col-md-8 pt-3 pb-5">
+		<!-- Users are taken to products page -->
+		<div class="row back-btn p-2">
+			<a href="{% url 'products' %}">← Continue Shopping</a>
+		</div>
+		<!-- Cart Status -->
+		<div class="title pb-2">
+			<div class="heading">
+				{% if not cart_items %}
+				<h3>Your cart is empty!</h3>
+				<div class="row p-5 border border-success bg-white justify-content-center">
+					<a href="{% url 'products' %}" class="btn btn-success mb-3">We need to go shopping!</a>
+				</div>
+				{% else %}
+				<h3>Shopping Cart</h3>
+				{% endif %}
+			</div>
+		</div>
+		<!-- Dispay Items in cart -->
+		{% if cart_items %}
+		<div class="row pt-3 pl-2 border border-success bg-white justify-content-center">
+			{% for item in cart_items %}
+			<div class="row col-12">
+				<div class="product ml-2 mx-auto"
+					style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
+				<div class="caption p-3 mx-auto">
+					<h4>{{ item.product.name }}</h4>
+					<div class="input-group-addon">Quanity: {{item.quantity}}</div>
+					<p>£{{ item.product.price }}</p>
 
-                <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
-                    {% csrf_token %}
-                    <div class="form-group">
-                        <label for="inputAmount" class="sr-only">New Qty</label>
-                        <p>Adjust quanity:</p>
-                        <div class="input-group">
-                            <input name="quantity" type="number" value="{{item.quantity}}" min="0" max="999" class="form-control" />
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary ml-2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
-                </form>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-    <!-- Cart Total -->
-    <div class="row w-100 p-3 mb-2 bg-secondary text-white justify-content-end">
-        <p>Total:</p>
-        <p><span class="glyphicon glyphicon-euro pl-1" aria-hidden="true"></span>£{{ total }}</p>
-        <a href="{%  url 'checkout' %}" class="btn btn-success ml-3" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
-    </div>
-    {% endif %}
+					<form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
+						{% csrf_token %}
+						<div class="form-group">
+							<label for="inputAmount" class="sr-only">New Qty</label>
+							<p>Adjust quanity:</p>
+							<div class="input-group">
+								<input name="quantity" type="number" value="{{item.quantity}}" min="0" max="999" class="form-control" />
+                            </div>
+							</div>
+							<button type="submit" class="btn btn-primary ml-2"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
+					</form>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<!-- Cart Total -->
+		<div class="row w-100 p-3 mb-2 bg-secondary text-white justify-content-end">
+			<p>Total:</p>
+			<p><span class="glyphicon glyphicon-euro pl-1" aria-hidden="true"></span>£{{ total }}</p>
+			<a href="{%  url 'checkout' %}" class="btn btn-success ml-3"
+				role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
+		</div>
+		{% endif %}
+	</div>
 </div>
 {% endblock %}

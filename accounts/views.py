@@ -27,7 +27,7 @@ def login(request):
         return redirect(reverse('index'))
     if request.method == 'POST':
         login_form = UserLoginForm(request.POST)
-        
+
         """ If user criteria is valid login user and send then to cart """
         if login_form.is_valid():
             user = auth.authenticate(username=request.POST['username'],
@@ -65,6 +65,7 @@ def registration(request):
             else:
                 messages.error(request,
                                "Unable to register your account at this time.")
+                return redirect(reverse('register'))
     else:
         registration_form = UserRegistrationForm()
     return render(request, 'registration.html', {
