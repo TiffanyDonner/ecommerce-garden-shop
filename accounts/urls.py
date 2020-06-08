@@ -22,5 +22,4 @@ urlpatterns = [
     url(r'^edit/$', edit_profile, name="edit_profile"),
     url(r'^password/', change_password, name="change_password"),
     url(r'^password-reset/', include(url_reset))
-
 ]
