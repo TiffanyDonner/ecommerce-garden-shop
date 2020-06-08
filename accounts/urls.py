@@ -7,10 +7,6 @@ from accounts.views import (
     edit_profile,
     change_password,
 )
-from django.contrib.auth.views import (
-    password_reset, password_reset_done, password_reset_confirm,
-    password_reset_confirm, password_reset_complete,
-)
 from accounts import url_reset
 
 

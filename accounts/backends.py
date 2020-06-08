@@ -2,14 +2,9 @@ from django.contrib.auth.models import User
 
 
 class EmailAuth:
-    """Authenticate a user by an exact match on the email and password"""
-
+    """Verify the user with username and Passord"""
     def authenticate(self, username=None, password=None):
-        """
-        Get an instance of `User` based off the email and verify the
-        password
-        """
-
+        """ Get the user  """
         try:
             user = User.objects.get(email=username)
 
@@ -21,10 +16,7 @@ class EmailAuth:
             return None
 
     def get_user(self, user_id):
-        """
-        Used by the Django authentiation system to retrieve a user instance
-        """
-
+        """ Retrieve an instance of the user or return none """
         try:
             user = User.objects.get(pk=user_id)
 

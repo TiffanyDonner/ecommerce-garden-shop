@@ -9,7 +9,7 @@ from checkout.models import OrderLineItem
 
 
 def index(request):
-    """Return the account.html file"""
+    """Simple return index"""
     return render(request, 'index.html')
 
 
@@ -22,12 +22,13 @@ def logout(request):
 
 
 def login(request):
-    """Return a login page"""
+    """Verifys user and returns login page"""
     if request.user.is_authenticated:
         return redirect(reverse('index'))
     if request.method == 'POST':
         login_form = UserLoginForm(request.POST)
-
+        
+        """ If user criteria is valid login user and send then to cart """
         if login_form.is_valid():
             user = auth.authenticate(username=request.POST['username'],
                                      password=request.POST['password'])
@@ -45,7 +46,7 @@ def login(request):
 
 
 def registration(request):
-    """Render the registration page"""
+    """Render the registration page and validate criteria"""
     if request.user.is_authenticated:
         return redirect(reverse('index'))
 
@@ -71,7 +72,7 @@ def registration(request):
 
 
 def user_profile(request):
-    """The user's profile page"""
+    """ Pull user database information to page """
     user = User.objects.get(
         email=request.user.email,
         first_name=request.user.first_name,
@@ -86,7 +87,7 @@ def user_profile(request):
 
 
 def edit_profile(request):
-    """Return the edit_profile file"""
+    """ Request User instance to edit profile """
     if request.method == 'POST':
         form = EditProfileForm(request.POST, instance=request.user)
 
@@ -101,6 +102,7 @@ def edit_profile(request):
 
 
 def change_password(request):
+    """ Change password for logged in user """
     if request.method == 'POST':
         form = PasswordChangeForm(data=request.POST,
                                   user=request.user)
