@@ -7,11 +7,13 @@
 {% block page_title %}Shopping Cart{% endblock %} 
 
 {% block content %}
+<!-- Cart App Template-->
 <div class="container col-md-8 pt-3 pb-5">
     <!-- Users are taken to products page -->
     <div class="row back-btn p-2">
         <a href="{% url 'products' %}">← Continue Shopping</a>
     </div>
+    <!-- Cart Status -->
     <div class="title pb-2">
         <heading>
             {% if not cart_items %}
@@ -24,6 +26,7 @@
             {% endif %}
         </heading>
     </div>
+    <!-- Dispay Items in cart -->
     {% if cart_items %}
     <div class="row pt-3 pl-2 border border-success justify-content-center">
         {% for item in cart_items %}
@@ -49,6 +52,7 @@
         </div>
         {% endfor %}
     </div>
+    <!-- Cart Total -->
     <div class="row w-100 p-3 mb-2 bg-secondary text-white justify-content-end">
         <p>Total:</p>
         <p><span class="glyphicon glyphicon-euro pl-1" aria-hidden="true"></span>£{{ total }}</p>
