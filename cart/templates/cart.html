@@ -14,7 +14,7 @@
     </div>
     <div class="title pb-2">
             <heading>
-                {% if nothing_in_cart %}
+                {% if not cart_items %}
                 <h3>Your cart is empty!</h3>
                 <div class="row pt-3 pl-2 border border-success justify-content-center">
                 <a href="{% url 'products' %}" class="btn btn-success mb-3">Let's go shopping</a>
@@ -24,7 +24,7 @@
                 {% endif %}
             </heading>
     </div>
-    {% if not nothing_in_cart %}
+    {% if cart_items %}
     <div class="row pt-3 pl-2 border border-success justify-content-center">
 
         {% for item in cart_items %}
