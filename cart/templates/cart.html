@@ -13,9 +13,20 @@
         <a href="{% url 'products' %}">← Continue Shopping</a>
     </div>
     <div class="title pb-2">
-        <h3>Shopping Cart</h3>
+            <heading>
+                {% if nothing_in_cart %}
+                <h3>Your cart is empty!</h3>
+                <div class="row pt-3 pl-2 border border-success justify-content-center">
+                <a href="{% url 'products' %}" class="btn btn-success mb-3">Let's go shopping</a>
+                </div>
+                {% else %}
+                <h3>Shopping Cart</h3>
+                {% endif %}
+            </heading>
     </div>
+    {% if not nothing_in_cart %}
     <div class="row pt-3 pl-2 border border-success justify-content-center">
+
         {% for item in cart_items %}
         <div class="row col-12">
             <div class="product ml-2 mx-auto" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
@@ -44,5 +55,6 @@
         <p><span class="glyphicon glyphicon-euro pl-1" aria-hidden="true"></span>£{{ total }}</p>
         <a href="{%  url 'checkout' %}" class="btn btn-success ml-3" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
     </div>
+    {% endif %}
 </div>
 {% endblock %}
