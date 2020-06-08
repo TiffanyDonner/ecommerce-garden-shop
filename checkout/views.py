@@ -47,9 +47,9 @@ def checkout(request):
                 messages.error(request, "Your card was declined!")
 
             if customer.paid:
-                messages.error(request, "You have successfully paid")
+                messages.error(request, "You have successfully paid.")
                 request.session['cart'] = {}
-                return redirect(reverse('products'))
+                return redirect(reverse('order_complete'))
             else:
                 messages.error(request, "Unable to take payment")
         else:
@@ -64,3 +64,9 @@ def checkout(request):
                                              "payment_form": payment_form,
                                              "publishable":
                                              settings.STRIPE_PUBLISHABLE})
+
+
+@login_required()
+def order_complete(request):
+    """A View that renders a completed order page"""
+    return render(request, "order_complete.html")

@@ -26,9 +26,9 @@
                 {% for item in cart_items %}
                     <div class="row mx-auto col-12">
                     
-                            <div class="product ml-2" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
+                            <div class="product ml-2 mx-auto" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
 
-                            <div class="caption p-3">
+                            <div class="caption p-3 mx-auto">
                                 <h4>{{ item.product.name }}</h4>
                                 <div class="input-group-addon">Quanity: {{item.quantity}}</div>                 
                                 <p>£{{ item.product.price }}</p>
