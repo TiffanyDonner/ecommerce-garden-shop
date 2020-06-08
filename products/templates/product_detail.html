@@ -1,17 +1,21 @@
 {% extends 'base.html' %}
 
-{% load static %} {% block page_title %}Product Detail{% endblock %} 
+{% load static %} 
+
+{% block page_title %}Product Detail{% endblock %} 
 
 {% block content %}
-<div class="container">
+<div class="bg-light">
+    <div class="container pt-4 pb-5">
+        
     <!-- Users are taken to products page -->
-    <div class="row back-btn p-4">
+    <div class="title pb-2">
         <a href="{% url 'products' %}">← Return to Shop</a>
     </div>
     <!-- Product Detail -->
-    <div class="row product-detail border border-success p-4 mb-3">
-        <div class="img-wrap product col-lg-3 w-100" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
-        <div class="product-info col-lg-3 p-1 mt-4">
+    <div class="row border border-success col-lg-11 bg-white justify-content-center">
+        <div class="img-wrap product col-lg-3 mt-3 w-100" style="background-image: url('{{ MEDIA_URL }}{{ product.image }}')"></div>
+        <div class="product-info col-lg-5 p-1 mt-4">
             <h5>{{ product.name }}</h5>
             <p>{{ product.description }}</p>
         </div>
