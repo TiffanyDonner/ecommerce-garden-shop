@@ -198,6 +198,7 @@ Any suggestions given by users have been added above in [Features Left To Implem
 - MDB [Bootstrap Templates](https://mdbootstrap.com/docs/jquery/forms/contact/)
 - Yuksel CELIK [17 Django E Commerce Product Review Comment Rating English](https://www.youtube.com/watch?v=OvTs8BMLb7o)
 - Codemy.com [Contact Pages](https://www.youtube.com/watch?v=w4ilq6Zk-08)
+- Product discriptions are from Wikipedia
 - Shadow Effect on home page from, [codesdope.](https://www.codesdope.com/blog/article/25-creative-css3-text-shadow-effects-you-cant-miss/)
 
 ### Image Credits

@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from accounts.forms import UserLoginForm, UserRegistrationForm, EditProfileForm
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
+from checkout.models import OrderLineItem
 
 
 def index(request):
@@ -76,8 +77,12 @@ def user_profile(request):
         first_name=request.user.first_name,
         last_name=request.user.last_name
         )
+
     orders = user.orders.all()
-    return render(request, 'profile.html', {'profile': user, 'orders': orders})
+
+    order = OrderLineItem.objects.filter()
+
+    return render(request, 'profile.html', {'profile': user, 'orders': orders, 'order': order,})
 
 
 def edit_profile(request):
@@ -103,10 +108,10 @@ def change_password(request):
         if form.is_valid():
             form.save()
             update_session_auth_hash(request, form.user)
-            messages.success(request, "Your password was updated.")
+            messages.success(request, "Your password was updated!")
             return redirect('profile')
         else:
-            messages.success(request, "You have entered the information incorrectly. Try again.")
+            messages.success(request, "Please check your password and try again.")
             return redirect('change_password')
 
     else:

@@ -39,14 +39,26 @@
         <div class="row">
             <p class="mt-1"><a href="{% url 'change_password' %}">Change Password</a></p>
         </div>
+        <div>
+        <h5>Order Date History</h5>
+        </div>
+        <div>
+            {% if order %}          
+            {% for order in orders %}            
+            <p>{{ order.date }} {{ order.town_or_city }} {{ order.county }}</p>
+            {% endfor %}     
+            {% endif %}  
+        </div>     
+        <div class="no-orders">
+            {% if not orders %}
+
+            <p>Looks like you haven't made any orders yet. <a href="{% url 'products' %}">Go shopping!</a></p>
+
+            {% endif %}
+        </div>
+
         <div class="row">
-            <h5>Order History</h5>
-            
-            {% for order in orders %}
-            <div class="row">
-            {{ order }}
-            </div>
-            {% endfor %}
+            <p class="mt-1">Please <a href="{% url 'contact' %}">Contact Us</a> if you have any questions about an order.</p>
         </div>
     </div>
 </div>
