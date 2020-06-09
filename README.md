@@ -1,6 +1,6 @@
 ![Garden Shop Site Header Image](static/readme/readme-header-screens-01.jpg)
 # Garden Shop
-The Garden Shop is a full stack ecommmerce website built with the neighborhood garden store in mind. 
+The Garden Shop is a full-stack eCommerce website built with the neighborhood garden store in mind. 
 
 [![Build Status](https://travis-ci.com/TiffanyDonner/ecommerce-garden-shop.svg?branch=master)](https://travis-ci.com/TiffanyDonner/ecommerce-garden-shop)
 
@@ -20,43 +20,38 @@ The Garden Shop is a full stack ecommmerce website built with the neighborhood g
 A live demo of the website can be found [here](https://ecommerce-garden-shop.herokuapp.com/).
 
 ## Project Purpose
-To build a fullstack web application, using HTML, CSS, JavaScript, Python+Django with a relational database.
+To build a full-stack web application, using HTML, CSS, JavaScript, Python+Django with a relational database.
 That can take payments through Stripe.
 
 ## UX
-The strategy of designing this website was to give the user a very structed way to shop online by using 
-a typlical ecommerce store feel without all the clutter. The use of bright and vibirant colors and high quality 
-images is meant to each users visit a happy one. 
+The strategy of designing this website was to give the user a very structured way to shop online by using 
+a typical eCommerce store feel without all the clutter. The use of bright and vibrant colors and high-quality images are meant to make each user visit a happy one. 
 
 ### The ideal Garden Shop User is:
 - Reading and Speaking English
 - Like or would like to garden
 - Located in and around a neighborhood AoE (Anywhere on Earth)
-- Would like to find inspration for their their garden
+- Would like to find inspiration for their garden
 
-### Features
-- 
-
-
-Wireframes designed in Adobe Illistraitor. [Wireframes](https://lh3.googleusercontent.com/L66DA5NrPD_CTLQ1ytZsl2Ywbk4LUaF7R0C1x-D2QhugF17I_jtJO0d-tjH_1ureV0gtvXt4degp1EW-mkC8Q-PRwzuLeClvLvAS9haZvsF6P7thf_Nsmocxm2MaE_RlW3RNZiWBA0s=w2400)
+Wireframes designed in Adobe Illustrator. [Wireframes](https://lh3.googleusercontent.com/L66DA5NrPD_CTLQ1ytZsl2Ywbk4LUaF7R0C1x-D2QhugF17I_jtJO0d-tjH_1ureV0gtvXt4degp1EW-mkC8Q-PRwzuLeClvLvAS9haZvsF6P7thf_Nsmocxm2MaE_RlW3RNZiWBA0s=w2400)
 
 ### User Stories
 #### Magnus
 Magnus is a landscape designer with a large client base. He enjoys neighborhood garden centers for their personal touch
 and individualized attention.
 - Features he needs:
-    - An easy way to search specific plants for his clients.
+    - An easy way to search for specific plants for his clients.
     - A place he can ask questions and get knowable answers.
     - An area to review his order history.
     - Fast delivery to his job sites
 
 #### Lina
 Lina is retired and enjoys having flowers in her garden. She doesn't drive anymore so having a store that 
-delivers is a prioty for her.
+delivers is a priority for her.
 - Features she needs:
     - To be able to shop and pay for her products online.
     - An easy way to contact the store if she has any questions.
-    - Product discriptions in order for her to make decistions on what to purchase.
+    - Product descriptions for her to be able to make decisions on what to purchase.
 
 ### Design
 
@@ -65,39 +60,39 @@ delivers is a prioty for her.
 ### Home Page
 - Includes a full width, jumbotron, image that is static and adds depth to the page.
 - Features products
-- A quotes carousal with store reviews.
+- A quote carousal with store reviews.
 - A responsive navigation bar and footer with easy to navigate links to pages and user account.
 
 ### Account Page
-- Site users can register, login or logout. This information is then stored in the database.
+- Site users can register, login, or logout. This information is then stored in the database.
 - Users can view order history dates.
-- The navigation bar updates to the user staus (Logged in or out).
+- The navigation bar updates to the user status (Logged in or out).
 - Logged-in users can add, update, delete account information in the database.
 - Users can update their password when logged in.
-- User can get an email notification to reset a forgotten paswords.
-- Messages in breadcrums are used to help the user know where they are in different processes.
+- Users can get an email notifications to reset a forgotten password.
+- Messages in breadcrumbs are used to help the user know where they are in different processes.
 
 ### Shop
-- The search bar is always located at the top of the page. It can filter by words in product names and discriptions.
+- The search bar is always located at the top of the page. It can filter by words in product names and descriptions.
 - Products can be filtered by categories in the navigation bar and footer.
 - Users can add items from the products page or product description view.
-- The cart displays an image of the product, it's name and price.
-- Product quanities can be adjusted at the product or inthe cart.
+- The cart displays an image of the product, it's name, and price.
+- Product quantities can be adjusted at the product or in the cart.
 
 ### Checkout
-- Users must be logged in to checkout. Orders are then same in their account.
+- Users must be logged in to checkout. Orders are then the same in their account.
 - Products being purchased with totals display in checkout.
-- Use cardnumber 4242424242424242 to check out with Stripe testing.
+- Use card number 4242424242424242 to check out with Stripe testing.
 
 ### Contact Page
-- Allows the user to easily contact the store with confirmation.
+- It allows the user to easily contact the store with a confirmation.
 
 ## Features Left To Implement
-- Add a backend system to keep track of product quanities.
-- Add Favorites as a filter to populate automatically to home page in Favorite Products instead of being hard coded.
-- Add a blog to populate featured posts on home page.
-- Add size, weight and features to product details.
-- Redirect user during checkout to payment information instead of backto the homepage.
+- Add a backend system to keep track of product quantities.
+- Add Favorites as a filter to populate automatically to the home page in Favorite Products instead of being hardcoded.
+- Add a blog to populate featured posts on the home page.
+- Add size, weight, and features to product details.
+- Redirect user during checkout to payment information instead of back to the homepage.
 - Add product reviews
 - Add product preorder to store.
 - User favorites.
@@ -107,7 +102,7 @@ delivers is a prioty for her.
 ### Technology Used
 |  |  |
 |----------------------------------|----------------------------------|
-| [HTML](https://www.w3.org/html/) | To provide the structure of the webiste |
+| [HTML](https://www.w3.org/html/) | To provide the structure of the website |
 | [CSS](https://www.w3.org/Style/CSS/Overview.en.html) | To make the website look better visually. | 
 | [jQuery](https://jquery.com/) | JavaScript library | 
 | [Python](https://www.python.org/) | To manage the database | 
@@ -119,13 +114,13 @@ delivers is a prioty for her.
 | [Github](https://github.com/) | File hosting |
 | [Gitpod](https://gitpod.io/) | Code editor and version control |
 | [Google Fonts](https://fonts.google.com/) | 'Montserrat', 'Esteban' | 
-| [Bootstrap](https://getbootstrap.com/) | Front-end open source toolkit |
+| [Bootstrap](https://getbootstrap.com/) | Front-end open-source toolkit |
 | [Font Awesome](https://fontawesome.com/6?next=%2F) | Icons |
 |  |  | 
 
 ## Testing
 - Manual Testing: All aspects of the website were tested throughout the process.
-    - Navigation and dropdowns, Search, Adding and editing cart, Password Resets, Checkout forms, Database, Regiter, Sign, Logout, Update Profile...
+    - Navigation and dropdowns, Search, Adding and editing cart, Password Resets, Checkout forms, Database, Register, Sign, Logout, Update Profile...
 - W3C Markup Validation for validating the HTML.
 - W3C CSS validation was used for validating the CSS.
 - JS Hint for JavaScript validation.
@@ -142,10 +137,10 @@ delivers is a prioty for her.
 
 #### After you filled in the registration form, were you able to intuitively know what your next step was?
 - User A, "Yes! Go Shopping!"
-- User B, "Yes, I used the navigation menu to tofind products.
+- User B, "Yes, I used the navigation menu to to find products.
 
-#### When you add a product to the cart, is it easy to update your quanity and find your next step?
-- User A, "Yes. continue shoping."
+#### When you add a product to the cart, is it easy to update your quantity  and find your next step?
+- User A, "Yes. continue shopping."
 - User B, "Yes, but I wasn't able to view what products I purchased. Just the order date."
     - Update: These features will be added in the next update.
 
@@ -155,7 +150,7 @@ delivers is a prioty for her.
 
 Any suggestions given by users have been added above in [Features Left To Implement](#Features-Left-To-Implement)
 
-### Devices Tested and Reponsiveness
+### Devices Tested and Responsiveness
 ✓ The site is accessible to everyone on all devices.<br/>
 ✓ Both Windows and Apple computers in:<br/>
     - Chrome<br/>
@@ -198,19 +193,18 @@ Any suggestions given by users have been added above in [Features Left To Implem
 3. Navigate to App connected to GitHub and connect your GitHub Repository.
 4. Then Enable Automatic Deploys.
 5. Now your Heroku app will update every time you push GitHub (git add ., git commit -m "", git push)
-6. Navigate to the setting tab and your environment varible to Congig Vars.
-7. 
+6. Navigate to the setting tab and your environment variable to Congig Vars.
 
 ## Credits
 - Code Institue, [Ecommerce Project](https://youtu.be/Cy6BDyfs7DM)
 - My mentor Brian Macharia, Code Institute Tutors, and Slack Group!
-- Logo Created with Adobe Illistraitor. Plant image in logo anf favicon from: [YAWD](https://ya-webdesign.com/imgdownload.html)
-- Quotes Carousal Code from [BootStrapious] (https://bootstrapious.com/p/bootstrap-carousel-with-quotes)
+- Logo Created with Adobe Illustrator. Plant image in logo and favicon from: [YAWD](https://ya-webdesign.com/imgdownload.html)
+- Quotes Carousel  Code from [BootStrapious] (https://bootstrapious.com/p/bootstrap-carousel-with-quotes)
 - Reduced Image Sizes with [TinyPNG](https://tinypng.com/)
 - Max Goodridge [Django Tutorial](https://www.youtube.com/watch?v=JmaxoPBvp1M&list=PLw02n0FEB3E3VSHjyYMcFadtQORvl1Ssj&index=18)
 - MDB [Bootstrap Templates](https://mdbootstrap.com/docs/jquery/forms/contact/)
 - Codemy.com [Contact Pages](https://www.youtube.com/watch?v=w4ilq6Zk-08)
-- Product discriptions are from Wikipedia
+- Product descriptions are from Wikipedia
 - Django Tests [Help Code](https://www.valentinog.com/blog/testing-django/)
 - Shadow Effect on home page from, [codesdope.](https://www.codesdope.com/blog/article/25-creative-css3-text-shadow-effects-you-cant-miss/)
 
