@@ -102,6 +102,7 @@ def edit_profile(request):
         return render(request, 'edit_profile.html', args)
 
 
+# Code modeled from Max Goodridge [Django Tutorial](https://www.youtube.com/watch?v=JmaxoPBvp1M&list=PLw02n0FEB3E3VSHjyYMcFadtQORvl1Ssj&index=18)
 def change_password(request):
     """ Change password for logged in user """
     if request.method == 'POST':

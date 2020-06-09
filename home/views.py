@@ -19,6 +19,7 @@ def pineapple(request):
     return render(request, 'grow_pineapple.html')
 
 
+# Code modeled from Codemy.com [Contact Pages](https://www.youtube.com/watch?v=w4ilq6Zk-08)
 def contact(request):
     """Returns the contact file"""
     if request.method == "POST":
